@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Basics{
 // 1 + 2
@@ -64,7 +64,7 @@ public class Basics{
         return arrsum(arr)/a;
     }
 
-public static int[] eliminate_negative(int[] arr){
+    public static int[] eliminate_negative(int[] arr){
         
         for (int i = 0;  i < arr.length;  i++){
             if (arr[i]< 0){
@@ -73,4 +73,36 @@ public static int[] eliminate_negative(int[] arr){
         }
         return arr;
     }
+
+
+    
+    public static Integer min(int[] arr){
+        int min = 0;
+        for (int i = 0;  i < arr.length;  i++){
+            if ( arr[i]<min){
+                min = arr[i];
+            }
+        }
+    return min;
+    }
+
+    public static String info(int[] arr){
+        String info = String.format("Max: %d, Min: %d Avg: %d", max(arr), min(arr), arravg(arr));
+        return info;
+    }
+
+    public static int[] arrShifting(int[] arr){
+        int last = arr.length-1;
+        
+        for (int i = 0;  i < arr.length-1;  i++){
+            arr[i]= arr[i+1];
+        }
+        arr[last] = 0;
+        // for(int i =0; i< arr.length ; i++){
+        //     System.out.println(arr[i]);
+        // }
+        System.out.println(Arrays.toString(arr)); //the array is displayed wierdly
+        return arr;
+    }
 }
+

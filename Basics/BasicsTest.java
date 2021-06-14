@@ -26,11 +26,22 @@ public class BasicsTest{
 //         System.out.println(square);
 
 // 8 
-    int avg =  manipulator.arravg(myArray);
-    System.out.println(avg);
+//     int avg =  manipulator.arravg(myArray);
+//     System.out.println(avg);
 // 9 again weird result, i think it's because of returning arr[]
-    int[] eliminateneg =  manipulator.eliminate_negative(myArray);
-    System.out.println(eliminateneg);
-    }
+//     int[] eliminateneg =  manipulator.eliminate_negative(myArray);
+//     System.out.println(eliminateneg);
 
+
+
+        // int min = manipulator.min(myArray);
+        // System.out.println(min);
+
+
+        // String info = manipulator.info(myArray);
+        // System.out.println(info);
+
+
+        int[] shift = manipulator.arrShifting(myArray);
+        }
 }
