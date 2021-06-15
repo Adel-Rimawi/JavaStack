@@ -1,9 +1,9 @@
 
 public class Human {
-	private int strength=3;
-	private int stealth=3;
-	private int intelligence = 3;
-	private int health = 100;
+	protected int strength=3;
+	protected int stealth=3;
+	protected int intelligence = 3;
+	protected int health = 100;
 	
 	public int gethealth() {
 		return this.health;
