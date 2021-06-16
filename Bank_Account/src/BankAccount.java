@@ -43,7 +43,19 @@ public class BankAccount {
     	}
     	else if (accountName =="checking") {
     		this.checkingBalance+=depositAmount;
-    	}this.totalAmount += depositAmount;
+    	}BankAccount.totalAmount += depositAmount;
         
+    }
+    public void withdraw(String accountName, int depositAmount) {
+    	if (accountName =="saving"&& this.savingBalance>=depositAmount) {
+    		this.savingBalance-=depositAmount;
+    	}
+    	else if (accountName =="checking" && this.checkingBalance>=depositAmount) {
+    		this.checkingBalance-=depositAmount;
+    	}this.totalAmount -= depositAmount;
+        
+    }
+    public double gettotalAmount() {
+    	return BankAccount.totalAmount;
     }
 }
