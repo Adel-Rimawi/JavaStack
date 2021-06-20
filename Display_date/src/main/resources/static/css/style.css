@@ -1,0 +1,16 @@
+.date {
+        color: blue;
+}
+.a{
+	font-size: 25px;
+	margin: auto auto; 
+}
+
+.time {
+        color: green;
+}
+
+body{
+	display: flex;
+	justify-content: space-around;
+}
