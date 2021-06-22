@@ -18,7 +18,7 @@ public class MainController {
 	@RequestMapping(value="/check", method=RequestMethod.POST)
     public String check(@RequestParam(value="code") String code) {
 		System.out.println(code);
-		if ("bushido" == code ) { //not working will should check tomorrow
+		if (code.equals("bushido") ) { //not working will should check tomorrow
 			return "redirect:/code";
 		}
 		else {

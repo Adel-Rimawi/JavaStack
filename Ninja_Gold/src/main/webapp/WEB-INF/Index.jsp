@@ -38,8 +38,8 @@
 	
 	<h3> Activities: </h3>
 	<div>
-		<c:forEach var="emp" items="${Activities}">
-	    <p> ${emp} </p>
+		<c:forEach var="Activity" items="${Activities}">
+	    <p> ${Activity} </p>
 		</c:forEach>
 	</div>
 	
