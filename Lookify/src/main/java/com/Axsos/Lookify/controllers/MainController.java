@@ -1,6 +1,8 @@
 package com.Axsos.Lookify.controllers;
 
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -33,7 +35,7 @@ public class MainController {
     	return "Main.jsp";
     }
     @RequestMapping(value = "/songs/new" , method = RequestMethod.POST)
-    public String add(@ModelAttribute("song") Lookify Song , BindingResult result) {
+    public String add(@Valid @ModelAttribute("song") Lookify Song , BindingResult result) {
     	if (result.hasErrors()) {
             return "Add.jsp";
         } else {
@@ -43,7 +45,7 @@ public class MainController {
         }
     }
     @RequestMapping("/songs/new")
-    public String New(@ModelAttribute("song") Lookify Song ) {
+    public String New( @ModelAttribute("song") Lookify Song ) {
             return "Add.jsp";
     }
     @RequestMapping("/songs/{id}")
